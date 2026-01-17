@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GROWTHCODE | Professional Interview Challenges</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-content">
+        <a href="#" class="logo">
+          <img src="logo.jpeg" alt="GROWTHCODE Logo" class="logo-img" />
+          <span>GROWTHCODE</span>
+        </a>
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by concept (e.g. Closure, Map)..."
+            onkeyup="handleSearch()"
+          />
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>The JS Interview questions</h1>
+        <p>
+          Master high-impact questions focused on core engine logic and
+          architecture.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-pill">
+            <div class="dot" style="background: var(--success)"></div>
+            <span> Easy</span>
+          </div>
+          <div class="stat-pill">
+            <div class="dot" style="background: var(--warning)"></div>
+            <span> Medium</span>
+          </div>
+          <div class="stat-pill">
+            <div class="dot" style="background: var(--danger)"></div>
+            <span> Advanced</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="filters" id="filterContainer">
+        <button class="filter-btn active" onclick="filterByLevel('all')">
+          All Questions
+        </button>
+        <button class="filter-btn" onclick="filterByLevel('easy')">Easy</button>
+        <button class="filter-btn" onclick="filterByLevel('medium')">
+          Medium
+        </button>
+        <button class="filter-btn" onclick="filterByLevel('advanced')">
+          Advanced
+        </button>
+      </div>
+
+      <div class="grid" id="cardsGrid"></div>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+      <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModalDirectly()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- <script src="questions.js"></script> -->
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
